@@ -1,0 +1,33 @@
+font-family = Terminess Nerd Font
+font-size = 17 
+
+window-width = 140
+window-height = 30
+window-padding-x = 0
+window-padding-y = 0
+confirm-close-surface = false
+
+title = " "
+macos-titlebar-proxy-icon = hidden
+
+palette = 0=#080808
+palette = 1=#d70000
+palette = 2=#789978
+palette = 3=#ffaa88
+palette = 4=#7788aa
+palette = 5=#d7007d
+palette = 6=#708090
+palette = 7=#ffffff
+palette = 8=#444444
+palette = 9=#d70000
+palette = 10=#789978
+palette = 11=#ffaa88
+palette = 12=#7788aa
+palette = 13=#d7007d
+palette = 14=#708090
+palette = 15=#ffffff
+background = 101010
+foreground = ffffff
+cursor-color = ffffff
+selection-background = 7a7a7a
+selection-foreground = 0a0a0a

@@ -1,0 +1,101 @@
+start-at-login = true
+
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+accordion-padding = 200
+
+default-root-container-layout = 'tiles'
+default-root-container-orientation = 'auto'
+
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+on-focus-changed = ['move-mouse window-lazy-center']
+
+automatically-unhide-macos-hidden-apps = true
+
+# Key bindings for general settings
+[key-mapping]
+preset = 'qwerty'
+
+# Gap settings
+[gaps]
+inner.horizontal = 20
+inner.vertical = 20
+outer.left = 60
+outer.bottom = 60
+outer.top = 60
+outer.right = 60
+
+# Key bindings for main mode
+[mode.main.binding]
+cmd-1 = 'workspace 1'
+cmd-2 = 'workspace 2'
+cmd-3 = 'workspace 3'
+cmd-4 = 'workspace 4'
+
+cmd-shift-h = 'focus left'
+cmd-shift-j = 'focus down'
+cmd-shift-k = 'focus up'
+cmd-shift-l = 'focus right'
+
+cmd-shift-s = 'mode service'
+cmd-shift-m = 'mode move'
+cmd-shift-a = 'mode app'
+
+# Key bindings for move mode
+[mode.move.binding]
+q = 'mode main'
+
+h = 'move left'
+j = 'move down'
+k = 'move up'
+l = 'move right'
+
+cmd-1 = ['move-node-to-workspace 1', 'workspace 1']
+cmd-2 = ['move-node-to-workspace 2', 'workspace 2']
+cmd-3 = ['move-node-to-workspace 3', 'workspace 3']
+cmd-4 = ['move-node-to-workspace 4', 'workspace 4']
+
+f = ['layout floating tiling', 'mode main']
+
+p = 'resize smart +50'
+m = 'resize smart -50'
+
+t = ['layout tiles horizontal vertical', 'mode main']
+a = ['layout accordion horizontal vertical', 'mode main']
+
+# Key bindings for service mode
+[mode.service.binding]
+q = 'mode main'
+r = ['reload-config', 'mode main']
+
+h = ['join-with left', 'mode main']
+j = ['join-with down', 'mode main']
+k = ['join-with up', 'mode main']
+l = ['join-with right', 'mode main']
+
+# Key bindings for app mode
+[mode.app.binding]
+q = 'mode main'
+
+t = ['exec-and-forget open -n /Applications/Ghostty.app', 'mode main']
+a = ['exec-and-forget open -n /Applications/Arc.app', 'mode main']
+d = ['exec-and-forget open -n /Applications/Discord.app', 'mode main']
+
+# Rules for specific applications
+[[on-window-detected]]
+if.app-id = 'company.thebrowser.Browser'
+run = 'move-node-to-workspace 2'
+
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+run = ['layout floating', 'move-node-to-workspace 1']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = ['move-node-to-workspace 3']
+
+[[on-window-detected]]
+if.app-id = 'com.nordvpn.NordVPN'
+run = ['layout floating', 'move-node-to-workspace 3']
+

@@ -1,0 +1,11 @@
+[include]
+    path = ~/.gitconfig.local
+[hub]
+    protocol = https
+[core]
+    excludesfile = ~/.gitignore
+    editor = nvim 
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
