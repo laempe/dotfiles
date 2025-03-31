@@ -4,6 +4,13 @@ export PATH=$PATH:$HOME/go/bin
 export EDITOR="nvim"
 
 # Plugins
+ZSH_CUSTOM="$HOME/.config/zsh"
+mkdir -p "$ZSH_CUSTOM"
+
+[[ -d "$ZSH_CUSTOM/zsh-autosuggestions" ]] || git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH_CUSTOM"
+[[ -d "$ZSH_CUSTOM/zsh-completions" ]] || git clone https://github.com/zsh-users/zsh-completions "$ZSH_CUSTOM"
+[[ -d "$ZSH_CUSTOM/zsh-syntax-highlighting" ]] || git clone https://github.com/zsh-users/zsh-syntax-highlighting "$ZSH_CUSTOM"
+
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh/zsh-completions/zsh-completions.plugin.zsh
